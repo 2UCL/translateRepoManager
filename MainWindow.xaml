@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window x:Name="window" x:Class="translateRepoManager2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="using:translateRepoManager2"
+        mc:Ignorable="d">
+    <Page Loaded="Page_Loaded">
+        <Grid x:Name="mainPanel" Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" VerticalAlignment="Center" Spacing="8">
+            <TextBlock Name="mainLabel" FontSize="36">お待ちください</TextBlock>
+            <TextBlock Name="subLabel">準備中...</TextBlock>
+            <ProgressBar x:Name="progressBar"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Spacing="16">
+            <Button Name="primaryButton"
+                    Height="76" FontSize="20"
+                    HorizontalAlignment="Stretch"
+                    Style="{StaticResource AccentButtonStyle}"
+                    Click="PrimaryButton_Click" IsEnabled="False"/>
+            
+            <Button Name="optionButton1" Height="48" HorizontalAlignment="Stretch" FontSize="20" IsEnabled="False" Click="OptionButton1_Click" />
+            <Button Name="optionButton2" Height="48" HorizontalAlignment="Stretch" FontSize="20" IsEnabled="False" Click="OptionButton2_Click" />
+        </StackPanel>
+    </Grid>
+</Page>
+    
+</Window>
